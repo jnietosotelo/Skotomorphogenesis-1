@@ -44,7 +44,7 @@ Install required packages:
 ```r
 install.packages(c(
   "dplyr", "ggplot2", "tidyr", "cowplot",
-  "agricolae", "ggfortify", "MASS",
+  "agricolae", "ggfortify", "MASS", "tibble"
   "patchwork", "ape"
 ))
 ```
