@@ -205,7 +205,7 @@ plot_bubble_accesion <- function(data, accesion_id) {
     labs(
       title = accesion_id,
       x = "",
-      y = "No. Seminal roots"
+      y = "Number"
     ) +
     
     theme_minimal() +
