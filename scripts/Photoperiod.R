@@ -13,7 +13,8 @@ library(ggplot2)
 library(dplyr)
 library(agricolae)
 library(patchwork)
-
+library(tidyr)
+library(tibble)
 
 # All results generated in this script will be saved in the "results" directory
 
