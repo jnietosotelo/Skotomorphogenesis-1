@@ -25,7 +25,7 @@ dir.create("results", showWarnings = FALSE)
 
 #Load data 
 
-DF <- read.csv("data/PrimordiumSR.csv", stringsAsFactors = TRUE)
+DF <- read.csv("data/PrimordiaSR.csv", stringsAsFactors = TRUE)
 
 
 DF <- DF %>%
