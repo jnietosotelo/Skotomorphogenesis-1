@@ -17,7 +17,7 @@ library(agricolae)
 library(patchwork)
 library(cowplot)
 library(tidyr)
-
+library(tibble)
 
 # All results generated in this script will be saved in the "results" directory
 
