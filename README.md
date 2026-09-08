@@ -187,8 +187,8 @@ All outputs (tables and figures) will be saved in the `results/` folder.
 
 | Figure | Description |
 |--------|------------|
-| Figure_4.tiff | Violin and bubble plots for all traits for maize |
-| Figure_5.tiff | Violin and bubble plots for all traits for teocinte|
+| Figure_3.tiff | Violin and bubble plots for all traits for maize |
+| Figure_4.tiff | Violin and bubble plots for all traits for teocinte|
 
 ---
 
