@@ -150,10 +150,10 @@ All outputs (tables and figures) will be saved in the `results/` folder.
 
 ---
 
-### `SR_primordium.R`
+### `SR_primordia.R`
 
 **Input:**
-- `PrimordiumSR.csv`  
+- `Primordiua.csv`  
   Each row represents an individual seedling.
 
 #### Outputs
@@ -209,7 +209,7 @@ All outputs (tables and figures) will be saved in the `results/` folder.
 
 | Figure | Description |
 |--------|------------|
-| Figure_6.tiff | Scatter plots (X–Y) for traits significantly correlated with altitude and maize |
+| Figure_5.tiff | Scatter plots (X–Y) for traits significantly correlated with altitude and maize |
 
 ---
 
