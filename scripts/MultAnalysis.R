@@ -548,6 +548,64 @@ plot(phy,
      no.margin = TRUE,
      label.offset = 0.5)
 
+# tree cordinates
+pp <- get("last_plot.phylo", envir = .PlotPhyloEnv)
+
+# Cluster tips assigment
+cluster_tip <- tabla_clusters$Cluster[
+  match(phy$tip.label, tabla_clusters$Code)
+]
+x <- pp$xx[1:length(phy$tip.label)]
+y <- pp$yy[1:length(phy$tip.label)]
+
+# Tips angle
+angulos <- atan2(y, x)
+
+orden <- order(angulos)
+
+angulos_ord <- angulos[orden]
+cluster_ord <- cluster_tip[orden]
+cambios <- which(
+  cluster_ord[-length(cluster_ord)] !=
+    cluster_ord[-1]
+)
+
+#Radius max
+
+radio_max <- max(sqrt(x^2 + y^2))
+
+# Dotted line
+
+for(i in cambios){
+  
+  theta1 <- angulos_ord[i]
+  theta2 <- angulos_ord[i + 1]
+  
+  if(abs(theta2 - theta1) > pi){
+    
+    if(theta1 < theta2){
+      theta1 <- theta1 + 2*pi
+    } else {
+      theta2 <- theta2 + 2*pi
+    }
+  }
+  
+  theta <- (theta1 + theta2) / 2
+  
+  # Dotted line  center to tips
+  radio_inicio <- radio_max * 0
+  radio_final  <- radio_max * 1.08
+  
+  segments(
+    radio_inicio * cos(theta),
+    radio_inicio * sin(theta),
+    radio_final * cos(theta),
+    radio_final * sin(theta),
+    lty = 2,
+    lwd = 1,
+    col = "black"
+  )
+}
 
 # Tags
 
@@ -894,10 +952,9 @@ plot_bubble_cluster <- function(data,
       color = "black",
       fontface = "bold"
     ) +
-    
-    scale_color_manual(values = c(
-      "I" = "#E69F00",
-      "II" = "#56B4E9",
+        scale_color_manual(values = c(
+      "I" = "#0072B2",
+      "II" = "#D55E00",
       "III" = "#009E73",
       "IV" = "#6A3D9A"
     )) +
