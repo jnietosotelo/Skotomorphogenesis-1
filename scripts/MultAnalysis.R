@@ -529,7 +529,7 @@ write.csv(
 #Assign cluster Colors
 
 
-colores <- c("#0072B2", "#D55E00", "#009E73", "#6A3D9A")
+colores <- c("#0072B2", "#D55E00",  "#6A3D9A", "#009E73")
 tip_colors <- colores[as.numeric(tabla_clusters$Cluster)]
 
 # Save tree diagram
