@@ -529,7 +529,7 @@ write.csv(
 #Assign cluster Colors
 
 
-colores <- c("#0072B2", "#D55E00",  "#6A3D9A", "#009E73")
+colores <- c("#CDCD00", "#D55E00",  "#6A3D9A", "#009E73")
 tip_colors <- colores[as.numeric(tabla_clusters$Cluster)]
 
 # Save tree diagram
@@ -593,8 +593,8 @@ for(i in cambios){
   theta <- (theta1 + theta2) / 2
   
   # Dotted line  center to tips
-  radio_inicio <- radio_max * 0
-  radio_final  <- radio_max * 1.08
+  radio_inicio <- radio_max * 0.4
+  radio_final  <- radio_max * 1.15
   
   segments(
     radio_inicio * cos(theta),
@@ -854,8 +854,8 @@ plot_violin_cluster <- function(data,
     ) +
     
     scale_color_manual(values = c(
-      "I" = "#E69F00",
-      "II" = "#56B4E9",
+      "I" = "#CDCD00",
+      "II" = "#D55E00",
       "III" = "#009E73",
       "IV" = "#6A3D9A"
     )) +
