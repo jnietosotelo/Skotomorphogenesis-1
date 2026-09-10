@@ -529,7 +529,7 @@ write.csv(
 #Assign cluster Colors
 
 
-colores <- c("#CDCD00", "#D55E00",  "#6A3D9A", "#009E73")
+colores <- c("#D55E00", "#4F94CD"  "#6A3D9A", "#009E73")
 tip_colors <- colores[as.numeric(tabla_clusters$Cluster)]
 
 # Save tree diagram
@@ -854,8 +854,8 @@ plot_violin_cluster <- function(data,
     ) +
     
     scale_color_manual(values = c(
-      "I" = "#CDCD00",
-      "II" = "#D55E00",
+      "I" = "#D55E00",
+      "II" = "#4F94CD",
       "III" = "#009E73",
       "IV" = "#6A3D9A"
     )) +
@@ -953,8 +953,8 @@ plot_bubble_cluster <- function(data,
       fontface = "bold"
     ) +
         scale_color_manual(values = c(
-      "I" = "#0072B2",
-      "II" = "#D55E00",
+      "I" = "#D55E00",
+      "II" = "#4F94CD",
       "III" = "#009E73",
       "IV" = "#6A3D9A"
     )) +
